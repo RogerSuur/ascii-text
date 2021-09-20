@@ -1,0 +1,1 @@
+<p>example usage: <code>go run . "hello"</code> </p>
