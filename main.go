@@ -10,6 +10,7 @@ import (
 
 func main() {
 	input := strings.Split(os.Args[1], "\\n")
+	fmt.Println(input)
 
 	fonts := []string{"standard.txt", "shadow.txt", "thinkertoy.txt"}
 	fmt.Println("\nChoose font, type:\n1 for standard\n2 for shadow\n3 for thinkertoy\n-------------------")
@@ -19,11 +20,10 @@ func main() {
 	font := fonts[number-1]
 
 	for _, word := range input {
-		if word == "\n" {
-			fmt.Print("yes")
-			fmt.Println()
-		} else {
+		if word != "" {
 			Lines(word, font)
+		} else {
+			fmt.Println()
 		}
 	}
 }
